@@ -4,5 +4,6 @@ body{
     to left,
     rgb(163, 0, 8) 0%,
     rgb(200, 70, 70) 100%
-    )
+    );
+    padding: 20px 60px;
 }
