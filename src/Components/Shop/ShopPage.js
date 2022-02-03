@@ -13,6 +13,7 @@ const SHOPDATA = [
         //   imageUrl: "/images/shop-img/hats/brown-brim.png",
           price: 25
         },
+     
         {
           id: 2,
           name: 'Blue Beanie',

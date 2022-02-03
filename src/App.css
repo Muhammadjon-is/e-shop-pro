@@ -1,9 +1,19 @@
 body{
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Source Code Pro', monospace;
   background: linear-gradient(
     to left,
-    rgb(163, 0, 8) 0%,
-    rgb(200, 70, 70) 100%
+    rgb(219, 211, 45) 0%,
+    rgb(221, 96, 46) 100%
     );
     padding: 20px 60px;
+}
+a{
+  text-decoration: none;
+    
+
+}
+a:hover{
+  font-size: 18px;
+color: rgb(245, 8, 8);
+font-weight:bold;
 }
