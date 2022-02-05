@@ -17,3 +17,7 @@ a:hover{
 color: rgb(245, 8, 8);
 font-weight:bold;
 }
+
+*{
+  box-sizing: border-box;
+}
