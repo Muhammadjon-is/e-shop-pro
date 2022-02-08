@@ -1,12 +1,14 @@
 import React from "react";
+import SignUpFirebase from "../Components/signUpFfirebase/signUpFirebase";
 import SignIn from "../Sign-in/sign-in";
 
+import "./SignInUp.scss"
 
-import './SignInUp'
 
 const SignInUp =  () => (
 <div className="sign-in-sign-up">
     < SignIn/>
+    <SignUpFirebase/>
 </div>
 
 )

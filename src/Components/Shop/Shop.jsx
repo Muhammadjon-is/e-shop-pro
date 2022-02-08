@@ -1,6 +1,7 @@
 import React from 'react';
 import SHOPDATA from './ShopPage';
 import CollectionPreview from '../PrevCollect/prev-collect';
+import "./shop.scss"
 
 class ShopPage extends React.Component{
     constructor(props) {
@@ -21,11 +22,11 @@ class ShopPage extends React.Component{
             {...otherCollectionProps}/>
        ))
    }    </div>
-);}
+) }
 }
 export default ShopPage;
 
-   {/* {collections.map(({id, ...otherCollectionProps}) =>(
+   /* {collections.map(({id, ...otherCollectionProps}) =>(
                 <CollectionPreview key={id} { ...otherCollectionProps } />
-            ))} */}
+            ))} */
     

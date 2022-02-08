@@ -11,14 +11,14 @@ class SignIn extends React.Component{
 
        this.state = {
            email: '',
-           password: '',
+           password: ''
 
        }
         }
 
 
         handleSubmit = event => {
-event.perventDefault();
+    event.preventDefault();
 
 this.state({email: '', password: ''}) }
 
@@ -32,7 +32,7 @@ const { value, name} = event.target;
             return(
                <div className='sign-in'>
       <h2>I  have aready an account</h2>
-    <sapn> Sing in with your email and password</sapn>
+    <span> Sing in with your email and password</span>
 
   <form onSubmit={this.handleSubmit}> 
       <FormInput name="email" type="email"
@@ -50,15 +50,15 @@ const { value, name} = event.target;
       {/* <label>Password</label> */}
 <div className='button'>
 
- <CustomButton type="submit" > Sign IN</CustomButton>
+ <CustomButton type="submit" > Sign IN </CustomButton>
 
  <CustomButton onClick={signInWithGoogle} isGoogleSignIn>sign in with google</CustomButton>
 </div>
       </form>
 
                </div> 
-            );
-        }
+            )
+                  }
  }
 
 

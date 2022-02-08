@@ -5,7 +5,7 @@ import HomePage from './Components/Page/HomePage/HomePage';
 import ShopPage from './Components/Shop/Shop';
 import Header from './Components/Header/header-comp';
 import SignInUp from './SignUp-SignIn/SignInUp';
-import { auth }  from "./firebase/firebaseUtil"
+import { auth,      createUserProfileDocument }  from "./firebase/firebaseUtil"
 
 const NoPage = () => {
   return <h1> Sorry  404 Page Not Found</h1>;
@@ -13,21 +13,48 @@ const NoPage = () => {
 
 
 class  App extends React.Component {
-    constructor(){
+    constructor() {
     super();
 
     this.state = {
-      currentUser: null
+      currentUser:  null
     }
   }
-
-  unsubscribeFromAuth = null
-    
+  unsubscribeFromAuth = null 
 componentDidMount(){
- this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-    this.setState({currentUser: user})
-    console.log(user);
+ this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+
+if(userAuth){
+  const userRef  =  await createUserProfileDocument(userAuth);
+ 
+  userRef.onSnapshot(snapShot => {
+
+    this.setState(
+      {
+      currentUser: {
+        id: snapShot.id,
+        ...snapShot.data()
+      }
+    })
+    console.log(this.state);
+   
+    
+    // }, () => {
+    //   console.log(this.state);
+    // } );
+
   })
+  
+// console.log(this.setState);
+
+}
+ this.setState({
+   currentUser: userAuth
+ });
+  // createUserProfileDocument(user);
+    // this.setState({currentUser: user})
+    // console.log(user);
+  });
 }
 componentWillUnmount()
 {
@@ -42,8 +69,8 @@ render(){
     
     <div>
       <Header  currentUser={this.state.currentUser}  />
-      
-     <Routes>1
+  
+     <Routes>
        <Route path="/" element={<HomePage/>}/>
        <Route path="/shop" element={<ShopPage/>}/>
        <Route path="/signin" element={<SignInUp/>}/>
