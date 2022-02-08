@@ -8,7 +8,7 @@ import SignInUp from './SignUp-SignIn/SignInUp';
 import { auth,      createUserProfileDocument }  from "./firebase/firebaseUtil"
 
 const NoPage = () => {
-  return <h1> Sorry  404 Page Not Found</h1>;
+  return <h1> Hi What's Up How Are You Sorry  404 Page Not Found</h1>;
 };
 
 
@@ -21,6 +21,7 @@ class  App extends React.Component {
     }
   }
   unsubscribeFromAuth = null 
+
 componentDidMount(){
  this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
 
@@ -28,24 +29,19 @@ if(userAuth){
   const userRef  =  await createUserProfileDocument(userAuth);
  
   userRef.onSnapshot(snapShot => {
-
-    this.setState(
-      {
+    this.setState({
       currentUser: {
         id: snapShot.id,
         ...snapShot.data()
       }
-    })
-    console.log(this.state);
-   
-    
-    // }, () => {
-    //   console.log(this.state);
-    // } );
+    });
 
-  })
+    // console.log(this.state);
+   
+
+  });
   
-// console.log(this.setState);
+
 
 }
  this.setState({
@@ -56,6 +52,7 @@ if(userAuth){
     // console.log(user);
   });
 }
+
 componentWillUnmount()
 {
   this.unsubscribeFromAuth();

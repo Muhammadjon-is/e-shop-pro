@@ -2,7 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 //  import firestore from './test';
-import './test'
+// import './test'
 
 // import  { initializeApp } from "firebase/app"
 // import 'firebase/firestore';
