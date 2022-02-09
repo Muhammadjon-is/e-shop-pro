@@ -1,13 +1,13 @@
 
 .collection-item {
-    width: 22%;
+    width: 26%;
     display: flex;
     flex-direction: column;
     height: 350px;
     align-items: center;
   
     .image {
-      width: 100%;
+      width: 90%;
       height: 95%;
       background-size: cover;
       background-position: center;
@@ -18,7 +18,7 @@
     }
   
     .collection-footer {
-      width: 100%;
+      width: 90%;
       height: 5%;
       display: flex;
       justify-content: space-between;
@@ -30,7 +30,7 @@
       }
   
       .price {
-        width: 10%;
+        width: 24%;
       }
      
     }
@@ -38,8 +38,60 @@
 
 
 
-  @media only screen and (max-width: 480px) {
-  imageUrl {
+  @media only screen and (max-width: 600px) {
+ .image  {
       width: 100%;
+      height: auto;
     }
+    .collection-item{
+      width: 100%;
+      
+    }
+    .collection-footer{
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+  
   }
+  @media only screen and (max-width: 768px) {
+    .image  {
+         width: 100%;
+         height: auto;
+       }
+       .collection-item{
+         width: 100%;
+         
+       }
+       .collection-footer{
+         margin-bottom: 20px;
+         font-size: 32px;
+       }
+     }
+     @media only screen and (max-width: 992px) {
+      .image  {
+           width: 100%;
+           height: auto;
+         }
+         .collection-item{
+           width: 100%;
+           
+         }
+         .collection-footer{
+           margin-bottom: 20px;
+           font-size: 32px;
+         }
+       }
+       @media only screen and (max-width: 1200px) {
+        .image  {
+             width: 100%;
+             height: auto;
+           }
+           .collection-item{
+             width: 100%;
+             
+           }
+           .collection-footer{
+             margin-bottom: 20px;
+             font-size: 32px;
+           }
+         }

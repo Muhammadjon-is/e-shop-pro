@@ -7,3 +7,56 @@
       margin: 10px 0;
     }
   }
+  @media only screen and (max-width: 600px) {
+    .sign-up {
+        width: 100%;
+        margin-top: 550px;
+        margin-right: 400px;
+    }
+    .button{
+        width: 100%;
+        // column-width: 100px;
+        // justify-content: space-between;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 768px) {
+  .sign-up {
+      width: 100%;
+      margin-top: 550px;
+      margin-right: 400px;
+  }
+  .button{
+      width: 100%;
+      // column-width: 100px;
+      // justify-content: space-between;
+      flex-direction: column;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .sign-up {
+      width: 100%;
+      margin-top: 550px;
+      margin-right: 400px;
+  }
+  .button{
+      width: 100%;
+      // column-width: 100px;
+      // justify-content: space-between;
+      // flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .sign-up {
+      width: 100%;
+      margin-top: 550px;
+      margin-right: 400px;
+  }
+  .button{
+      width: 100%;
+      // column-width: 100px;
+      // justify-content: space-between;
+      // flex-direction: column;
+  }
+}

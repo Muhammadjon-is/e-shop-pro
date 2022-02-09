@@ -43,6 +43,13 @@ import MenuItem from "../MenuItem/MenuItem";
                   id: 5,
                   linkUrl: 'shop/mens'
                  },
+                 {
+                  title: 'children',
+                  imageUrl: 'https://img.huffingtonpost.com/asset/59b014f21400001f00fa8442.jpeg?cache=CdmFnZiQJg&ops=scalefit_720_noupscale',
+                  size: 'large',
+                  id: 6,
+                  linkUrl: 'shop/mens'
+                 },
                 //  {
                 //     title: 'womens',
                 //     imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',

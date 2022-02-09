@@ -36,7 +36,7 @@ if(userAuth){
       }
     });
 
-    // console.log(this.state);
+    console.log(this.state);
    
 
   });
@@ -45,8 +45,7 @@ if(userAuth){
 
 }
  this.setState({
-   currentUser: userAuth
- });
+currentUser: userAuth });
   // createUserProfileDocument(user);
     // this.setState({currentUser: user})
     // console.log(user);
@@ -58,12 +57,8 @@ componentWillUnmount()
   this.unsubscribeFromAuth();
 }
 
-
-
 render(){
   return (
-
-    
     <div>
       <Header  currentUser={this.state.currentUser}  />
   

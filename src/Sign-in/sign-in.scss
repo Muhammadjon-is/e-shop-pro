@@ -10,6 +10,69 @@
         justify-content: space-between;
         
     }
+
+      
   
 
+}
+
+@media only screen and (max-width: 600px) {
+    .sign-in {
+        width: 100%;
+    }
+    .button{
+        width: 100%;
+        // column-width: 100px;
+        // justify-content: space-between;
+        flex-direction: column;
+        display: inline;
+     
+    
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sign-in {
+        width: 100%;
+    }
+    .button{
+        width: 100%;
+        // column-width: 100px;
+        // justify-content: space-between;
+        flex-direction: column;
+        display: inline;
+     
+    
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .sign-in {
+        width: 100%;
+    }
+    .button{
+        width: 100%;
+        // column-width: 100px;
+        // justify-content: space-between;
+        flex-direction: column;
+        display: inline;
+     
+    
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .sign-in {
+        width: 100%;
+    }
+    .button{
+        width: 100%;
+        // column-width: 100px;
+        // justify-content: space-between;
+        flex-direction: column;
+        display: inline;
+     
+    
+    }
 }

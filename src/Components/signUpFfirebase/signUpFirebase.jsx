@@ -26,7 +26,7 @@ class SignUpFirebase extends React.Component {
      const { displayName, email, password, confirmPassword} = this.state;
 
      if(password !== confirmPassword){
-         alert ("password cannot be same");
+         alert ("Password Don't Match ");
          return;
      }
 

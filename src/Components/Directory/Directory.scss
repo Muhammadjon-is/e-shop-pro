@@ -14,4 +14,50 @@
 
     }
 
+    @media screen and (max-width: 768px) {
+      .directory-menu {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+    
+    .directory-menu:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+  }
+
+  @media screen and (max-width: 992px) {
+    .directory-menu {
+      width: 100%;
+      // flex-direction: column;
+      margin-bottom: 20px;
+    }
+  
+  .directory-menu:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .directory-menu {
+    width: 100%;
+    // flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+.directory-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+}
+
+
 

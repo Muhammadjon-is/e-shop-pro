@@ -12,8 +12,7 @@ class SignIn extends React.Component{
        this.state = {
            email: '',
            password: ''
-
-       }
+           };
         }
 
 
@@ -21,6 +20,7 @@ class SignIn extends React.Component{
     event.preventDefault();
    
     const { email, password } = this.state;
+    //  this.setState({email: '', password: ''});
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
@@ -32,13 +32,7 @@ class SignIn extends React.Component{
       alert("Password or email wrong")
     }
       
-
     };
-
-
-
-
-
 
       handleChange = event => {
 const { value, name} = event.target;
@@ -70,7 +64,7 @@ const { value, name} = event.target;
 
  <CustomButton type="submit" > Sign IN </CustomButton>
 
- <CustomButton onClick={signInWithGoogle} isGoogleSignIn>sign in with google</CustomButton>
+ <CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign in with google</CustomButton>
 </div>
       </form>
 
