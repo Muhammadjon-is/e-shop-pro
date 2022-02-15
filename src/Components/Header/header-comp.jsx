@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
  import "./header-comp.scss"
 import {ReactComponent as Logo} from "../../assets/Crown.svg" 
 import { auth } from "../../firebase/firebaseUtil"
+import {connect} from 'react-redux'
 
 const Header = ({ currentUser }) =>(
 <div className="header">
@@ -32,13 +33,18 @@ const Header = ({ currentUser }) =>(
       ( <Link className="option" to="/signin"> Sign in</Link>)
 }
 
-</div>
+
+
+{/* <Cart currentUser =  {currentUser} /> */}
 
 </div>
+</div>
+);
 
+const mapStateToProps = state => ({
+currentUser: state.user.currentUser
+})
 
-)
-
-export default Header
+export default connect(mapStateToProps)(Header)
 
 
