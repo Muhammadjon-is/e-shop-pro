@@ -4,8 +4,12 @@ import { Link } from "react-router-dom"
 import {ReactComponent as Logo} from "../../assets/Crown.svg" 
 import { auth } from "../../firebase/firebaseUtil"
 import {connect} from 'react-redux'
+import CartIcon from "../cartIcon/cartIcon"
+// import CartDropDown from "../cartDrop/cartDrop"
+import CartDropDown from "../cartDrop/cartDrop"
 
-const Header = ({ currentUser }) =>(
+
+const Header = ({ currentUser, hidden }) => (
 <div className="header">
 <Link className="logo-container" to="/">
 <Logo className='logo' />
@@ -24,27 +28,28 @@ const Header = ({ currentUser }) =>(
  <Link className="option" to="/contact">
     CONTACT      
  </Link>
-
+ 
   
 {
    currentUser ?
-     (<div className="option" onClick={() => auth.signOut()}>Sign Out</div>)
-      :
-      ( <Link className="option" to="/signin"> Sign in</Link>)
+     (<div className="option" onClick={() => auth.signOut()}>
+        Sign Out
+     </div>
+     ) : ( <Link className="option" to="/signin"> Sign in</Link>)
+      
 }
-
-
-
-{/* <Cart currentUser =  {currentUser} /> */}
-
+<CartIcon className='option'/>
 </div>
-</div>
+    {hidden ? null : <CartDropDown />}
+  </div>
 );
 
-const mapStateToProps = state => ({
-currentUser: state.user.currentUser
-})
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden
+});
+
+
 
 export default connect(mapStateToProps)(Header)
-
 
