@@ -1,10 +1,13 @@
 body{
   font-family: 'Source Code Pro', monospace;
-  background: linear-gradient(
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 28%, #ece74e 100%);
+
+  /* background: linear-gradient(
     to left,
     rgb(219, 211, 45) 0%,
     rgb(221, 96, 46) 100%
-    );
+    ); */
     padding: 20px 60px;
 }
 a{
@@ -23,3 +26,5 @@ font-weight:bold;
 }
 
 
+/* background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 28%, #FFFB7D 100%); */

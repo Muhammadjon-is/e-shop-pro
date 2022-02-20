@@ -66,11 +66,10 @@ const { value, name} = event.target;
 
  <CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign in with google</CustomButton>
 </div>
-      </form>
-
-               </div> 
-            )
-                  }
+ </form>
+  </div> 
+     )
+   }
  }
 
 
